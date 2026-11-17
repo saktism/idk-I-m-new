@@ -1,198 +1,88 @@
-/* Reset Dasar & Variabel */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* Pengaturan Latar Belakang & Font Dasar */
 body {
-    background-color: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
+    background-color: #eef2f6;
+    color: #2c3e50;
     padding-bottom: 40px;
 }
 
-
-.flex-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Mempercantik Kontainer Tiap Section */
+.section1 .container,
+.section2 .container,
+.section3 .container,
+.section4 .container,
+.section5 .container,
+.section6 .container {
+    background-color: #ffffff !important;
+    border: none !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    padding: 30px !important;
+    transition: transform 0.3s ease;
 }
 
-.flex-col {
-    flex: 1;
-    min-width: 280px;
-}
-
-.flex-col-6 {
-    flex: 1;
-    min-width: calc(50% - 10px);
-}
-
-
-.image-placeholder {
-    background-color: #e0e0e0;
-    color: #666;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed #bbb;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Layout Komponen */
-.header-container {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    color: white;
-    padding: 60px 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.profile-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-}
-
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid white;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-.welcome-msg {
-    font-style: italic;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 5px 15px;
-    border-radius: 20px;
-}
-
-/* Main Container */
-.main-container {
-    max-width: 1100px;
-    margin: 30px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* Card layout */
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-.card h2 {
+/* Judul Tiap Bagian */
+h1 {
     color: #1e3c72;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 10px;
+    font-weight: 700;
 }
 
-/* Komponen Detail */
-.country-pic {
-    width: 250px;
-    height: 150px;
-    flex-shrink: 0;
-}
-
-.item-pic {
-    width: 100%;
-    height: 180px;
-    margin-top: 20px;
-}
-
-ul {
-    list-style-position: inside;
-    margin-bottom: 15px;
-}
-
-ul li {
-    margin-bottom: 8px;
-}
-
-.social-media {
-    margin-top: 20px;
-}
-
-.social-media h3 {
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-.social-media ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-}
-
-.social-media a {
-    color: #2a5298;
-    text-decoration: none;
+h2 {
+    color: #1e3c72;
     font-weight: 600;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-/* University Section Flex/Grid */
-.uni-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin-top: 20px;
-}
-
-.uni-card {
-    background: #fdfdfd;
-    border: 1px solid #eef2f5;
-    padding: 25px;
-    border-radius: 8px;
-}
-
-.uni-card h3 {
-    color: #2a5298;
-    margin: 15px 0 10px 0;
-}
-
-.uni-card p {
-    margin-bottom: 12px;
+/* Perataan Teks Rata Kanan-Kiri (Justify) */
+.text-justify-custom {
     text-align: justify;
+    line-height: 1.7;
 }
 
-.uni-pic {
+/* Pengaturan Gambar Profil Lingkaran */
+.profile-img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border: 5px solid #e3ebf6;
+    box-shadow: 0 4px 12px rgba(30, 60, 114, 0.15);
+}
+
+/* Pengaturan Gambar Section 2, 4, dan 5 */
+.section-img {
     width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Pengaturan Kartu Universitas (Section 6) */
+.uni-card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.uni-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.uni-img {
     height: 200px;
+    object-fit: cover;
 }
 
-footer {
-    text-align: center;
-    color: #888;
-    margin-top: 40px;
-    font-size: 0.9rem;
+/* Efek Hover pada Tombol Sosial Media */
+.btn-social {
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
-/* Responsif untuk layar HP */
-@media (max-width: 768px) {
-    .flex-row {
-        flex-direction: column;
-    }
-    .country-pic {
-        width: 100%;
-    }
-    .flex-col-6 {
-        min-width: 100%;
-    }
+.btn-social:hover {
+    transform: scale(1.05);
 }
